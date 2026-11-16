@@ -1,0 +1,139 @@
+% Транскрипция рабочих заметок с фотографий 184041 и 184042.
+% Зачёркнутые фрагменты опущены; сокращения раскрыты.
+% Номерные метки связывают определения с опорными точками.
+% Вспомогательные определения набраны с отступом слева.
+% Сборка из корня репозитория: working/1a-graphs/_src/render.sh
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ДЗ 1a}
+\rhead{Опорные точки}
+\cfoot{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\term}[1]{\par\textbf{#1.}\enspace}
+\definecolor{anchorink}{HTML}{24516B}
+\definecolor{anchorfill}{HTML}{EAF2F7}
+\newcommand{\anchorlabel}[1]{\begingroup
+  \setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.4pt}%
+  \fcolorbox{anchorink}{anchorfill}{\color{anchorink}\small\bfseries №\,#1}%
+  \endgroup}
+\newcommand{\anchorterm}[2]{\par\addvspace{8pt}%
+  \noindent\anchorlabel{#1}\quad\textbf{#2.}\par\nobreak\noindent}
+\newenvironment{auxiliary}{\begin{list}{}{%
+  \setlength{\leftmargin}{14mm}\setlength{\rightmargin}{0pt}%
+  \setlength{\topsep}{3pt}\setlength{\parsep}{5pt}%
+  \setlength{\partopsep}{0pt}}\item\relax}{\end{list}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Опорные точки}
+\end{center}
+
+\begin{enumerate}
+\item Граф $\longrightarrow$ неориентированный граф.
+\item Изоморфность графов (и неизоморфность графов)
+  $\longrightarrow$ изоморфизм.
+\item Валентность вершины $\longrightarrow$ отношение инцидентности.
+\item Полнота списка (что больше нет?) $\longrightarrow$ да!
+\item $\Gamma$ --- «нарисованные» графы (?) $\longrightarrow$ да!
+\item $|\Aut\Gamma|$ --- ?
+  \begin{itemize}
+  \item $\Aut\Gamma\longrightarrow\{\ldots\}\longrightarrow$ автоморфизм;
+  \item $|\ldots|$ --- мощность множества.
+  \end{itemize}
+\item Как через это доказать полноту?
+  \begin{itemize}
+  \item масса графа/системы;
+  \item полная система;
+  \item масса системы;
+  \item монотонность.
+  \end{itemize}
+\end{enumerate}
+
+\medskip\hrule\medskip
+\section*{Раскрытие понятий}
+\anchorterm{1}{Граф}
+Граф --- это тройка из множества вершин, множества рёбер и отображения,
+ставящего в соответствие каждому ребру пару вершин, упорядоченную или
+неупорядоченную.
+
+\begin{auxiliary}
+\term{Ориентированный граф}
+Это граф, у каждого ребра которого есть начало и конец.
+
+\term{Неориентированный граф}
+Это граф, у каждого ребра которого есть два равноправных конца.
+\end{auxiliary}
+
+\anchorterm{2}{Изоморфные графы}
+Два графа, между которыми существует хотя бы один изоморфизм.
+
+\begin{auxiliary}
+\term{Изоморфизм графов}
+Это пара биекций: вершин на вершины и рёбер на рёбра, согласованные
+с отображениями инцидентности обоих графов.
+\end{auxiliary}
+
+\anchorterm{3}{Валентность вершины}
+Это количество рёбер, которые присоединены к вершине.
+
+\begin{auxiliary}
+\term{Отношение инцидентности}
+Соответствие между вершиной и ребром, концом которого она является.
+Приписка: «входит», «входит/выходит» (орграф), «присоединено».
+\end{auxiliary}
+
+\newpage
+\section*{Автоморфизмы, масса и полнота}
+\anchorterm{6}{Автоморфизм графа}
+Это изоморфизм графа самого на себя.
+
+\anchorterm{7}{Масса графа}
+Число, обратное количеству его автоморфизмов.
+
+\anchorterm{7}{Масса системы}
+Это масса множества всех попарно неизоморфных графов, валентности которых
+равны компонентам вектора:
+\[
+  E=\sum_{\Gamma}\frac{1}{|\Aut\Gamma|}.
+\]
+Это масса минимальной полной системы графов, валентности которых равны
+компонентам вектора.
+
+\anchorterm{7}{Монотонность массы по системе графов}
+\[
+\text{Масса системы}\leq\text{масса полной системы},
+\]
+\[
+\text{равенство}\quad\Longleftrightarrow\quad\text{система полная}.
+\]
+Так как масса монотонна относительно системы попарно неизоморфных графов.
+
+\medskip\hrule\medskip
+\section*{Формула массы системы}
+\[
+\boxed{E=\sum_{\Gamma}\frac{1}{|\Aut\Gamma|}=\frac{PQ}{(2N)!}}
+\]
+$(n_1,n_2,\ldots,n_k)$ --- вектор валентностей.
+\[
+N=\frac12\sum_i n_i,
+\qquad
+P=\frac{(2N)!}{N!\,2^N},
+\]
+\[
+Q=\frac{(2N)!}
+  {(n_1!)^{m_1}m_1!\,(n_2!)^{m_2}m_2!\cdots}.
+\]
+$m_i$ --- частота $n_i$ в векторе валентностей.
+\end{document}
