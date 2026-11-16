@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1130" viewBox="0 0 1900 1130" font-family="Arial, sans-serif">
+<rect width="1900" height="1130" fill="white"/>
+<text x="32" y="48" font-size="36" font-weight="700" fill="#2455ab">MSC2020 · общее дерево задач</text>
+<text x="32" y="87" font-size="21" font-weight="400" fill="#475569">★ основной код задачи</text>
+<polyline points="140,780.5 158,780.5 158,523.0 158,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="158,523.0 180,523.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="445,523.0 466,523.0 466,523.0 466,523.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="466,523.0 485,523.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="805,523.0 824,523.0 824,234.0 824,756.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,234.0 845,234.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,456.0 845,456.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,646.0 845,646.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,756.0 845,756.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="158,850.0 180,850.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="445,850.0 466,850.0 466,850.0 466,850.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="466,850.0 485,850.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="805,850.0 824,850.0 824,850.0 824,850.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,850.0 845,850.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="158,944.0 180,944.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="445,944.0 466,944.0 466,944.0 466,944.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="466,944.0 485,944.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="805,944.0 824,944.0 824,944.0 824,944.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,944.0 845,944.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="158,1038.0 180,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="445,1038.0 466,1038.0 466,1038.0 466,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="466,1038.0 485,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="805,1038.0 824,1038.0 824,1038.0 824,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="824,1038.0 845,1038.0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<rect x="20" y="746.5" width="120" height="68" rx="12" fill="#e0f4f4" stroke="#1f8a8a" stroke-width="2"/>
+<text x="31" y="788.5" font-size="22" font-weight="700" fill="#1e293b">MSC2020</text>
+<rect x="180" y="492.0" width="265" height="62" rx="12" fill="#e3effc" stroke="#2f6fbf" stroke-width="2"/>
+<text x="193" y="521.0" font-size="24" font-weight="700" fill="#1e293b">05-XX</text>
+<text x="193" y="545.0" font-size="20" font-weight="400" fill="#1e293b">Комбинаторика</text>
+<rect x="180" y="819.0" width="265" height="62" rx="12" fill="#e3effc" stroke="#2f6fbf" stroke-width="2"/>
+<text x="193" y="848.0" font-size="24" font-weight="700" fill="#1e293b">90-XX</text>
+<text x="193" y="872.0" font-size="20" font-weight="400" fill="#1e293b">Исследование операций</text>
+<rect x="180" y="913.0" width="265" height="62" rx="12" fill="#e3effc" stroke="#2f6fbf" stroke-width="2"/>
+<text x="193" y="942.0" font-size="24" font-weight="700" fill="#1e293b">13-XX</text>
+<text x="193" y="966.0" font-size="20" font-weight="400" fill="#1e293b">Коммутативная алгебра</text>
+<rect x="180" y="995.0" width="265" height="86" rx="12" fill="#e3effc" stroke="#2f6fbf" stroke-width="2"/>
+<text x="193" y="1024.0" font-size="24" font-weight="700" fill="#1e293b">12-XX</text>
+<text x="193" y="1048.0" font-size="20" font-weight="400" fill="#1e293b">Теория полей и</text>
+<text x="193" y="1072.0" font-size="20" font-weight="400" fill="#1e293b">многочлены</text>
+<rect x="485" y="492.0" width="320" height="62" rx="12" fill="#f5f3fd" stroke="#6b4fbf" stroke-width="2"/>
+<text x="498" y="521.0" font-size="24" font-weight="700" fill="#1e293b">05Cxx</text>
+<text x="498" y="545.0" font-size="20" font-weight="400" fill="#1e293b">Теория графов</text>
+<rect x="485" y="807.0" width="320" height="86" rx="12" fill="#f5f3fd" stroke="#6b4fbf" stroke-width="2"/>
+<text x="498" y="836.0" font-size="24" font-weight="700" fill="#1e293b">90Bxx</text>
+<text x="498" y="860.0" font-size="20" font-weight="400" fill="#1e293b">Исследование операций и</text>
+<text x="498" y="884.0" font-size="20" font-weight="400" fill="#1e293b">управление</text>
+<rect x="485" y="901.0" width="320" height="86" rx="12" fill="#f5f3fd" stroke="#6b4fbf" stroke-width="2"/>
+<text x="498" y="930.0" font-size="24" font-weight="700" fill="#1e293b">13Mxx</text>
+<text x="498" y="954.0" font-size="20" font-weight="400" fill="#1e293b">Конечные коммутативные</text>
+<text x="498" y="978.0" font-size="20" font-weight="400" fill="#1e293b">кольца</text>
+<rect x="485" y="1007.0" width="320" height="62" rx="12" fill="#f5f3fd" stroke="#6b4fbf" stroke-width="2"/>
+<text x="498" y="1036.0" font-size="24" font-weight="700" fill="#1e293b">12Exx</text>
+<text x="498" y="1060.0" font-size="20" font-weight="400" fill="#1e293b">Общая теория полей</text>
+<rect x="845" y="155" width="1015" height="158" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="190" font-size="24" font-weight="700" fill="#1e293b">05C30</text>
+<text x="968" y="190" font-size="23" font-weight="700" fill="#1e293b">Перечисление графов</text>
+<rect x="1650" y="165" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="190" font-size="22" font-weight="700" fill="#8a5914">1a★</text>
+<text x="862" y="221" font-size="22" font-weight="700" fill="#1e293b">05C07</text>
+<text x="968" y="221" font-size="21" font-weight="400" fill="#1e293b">Степени вершин</text>
+<text x="1660" y="221" font-size="21" font-weight="400" fill="#8a5914">1a</text>
+<text x="862" y="253" font-size="22" font-weight="700" fill="#1e293b">05C60</text>
+<text x="968" y="253" font-size="21" font-weight="400" fill="#1e293b">Изоморфизмы и гомоморфизмы</text>
+<text x="1660" y="253" font-size="21" font-weight="400" fill="#8a5914">1a</text>
+<text x="862" y="285" font-size="22" font-weight="700" fill="#1e293b">05C25</text>
+<text x="968" y="285" font-size="21" font-weight="400" fill="#1e293b">Графы и абстрактная алгебра</text>
+<text x="1660" y="285" font-size="21" font-weight="400" fill="#8a5914">1a</text>
+<rect x="845" y="329" width="1015" height="254" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="364" font-size="24" font-weight="700" fill="#1e293b">05C50</text>
+<text x="968" y="364" font-size="23" font-weight="700" fill="#1e293b">Графы и линейная алгебра</text>
+<rect x="1650" y="339" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="364" font-size="22" font-weight="700" fill="#8a5914">1b★</text>
+<text x="862" y="395" font-size="22" font-weight="700" fill="#1e293b">05C38</text>
+<text x="968" y="395" font-size="21" font-weight="400" fill="#1e293b">Пути и циклы</text>
+<text x="1660" y="395" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<text x="862" y="427" font-size="22" font-weight="700" fill="#1e293b">05C05</text>
+<text x="968" y="427" font-size="21" font-weight="400" fill="#1e293b">Деревья</text>
+<text x="1660" y="427" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<text x="862" y="459" font-size="22" font-weight="700" fill="#1e293b">05C40</text>
+<text x="968" y="459" font-size="21" font-weight="400" fill="#1e293b">Связность</text>
+<text x="1660" y="459" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<text x="862" y="491" font-size="22" font-weight="700" fill="#1e293b">05C12</text>
+<text x="968" y="491" font-size="21" font-weight="400" fill="#1e293b">Расстояния в графах</text>
+<text x="1660" y="491" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<text x="862" y="523" font-size="22" font-weight="700" fill="#1e293b">05C45</text>
+<text x="968" y="523" font-size="21" font-weight="400" fill="#1e293b">Эйлеровость и гамильтоновость</text>
+<text x="1660" y="523" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<text x="862" y="555" font-size="22" font-weight="700" fill="#1e293b">05C10</text>
+<text x="968" y="555" font-size="21" font-weight="400" fill="#1e293b">Планарность и топология графов</text>
+<text x="1660" y="555" font-size="21" font-weight="400" fill="#8a5914">1b</text>
+<rect x="845" y="599" width="1015" height="94" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="634" font-size="24" font-weight="700" fill="#1e293b">05C21</text>
+<text x="968" y="634" font-size="23" font-weight="700" fill="#1e293b">Потоки в графах</text>
+<rect x="1650" y="609" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="634" font-size="22" font-weight="700" fill="#8a5914">1b, 1c★, 1d★</text>
+<text x="862" y="665" font-size="22" font-weight="700" fill="#1e293b">05C85</text>
+<text x="968" y="665" font-size="21" font-weight="400" fill="#1e293b">Алгоритмы на графах</text>
+<text x="1660" y="665" font-size="21" font-weight="400" fill="#8a5914">1d, 2a</text>
+<rect x="845" y="709" width="1015" height="94" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="744" font-size="24" font-weight="700" fill="#1e293b">05C70</text>
+<text x="968" y="744" font-size="23" font-weight="700" fill="#1e293b">Паросочетания и подмножества рёбер</text>
+<rect x="1650" y="719" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="744" font-size="22" font-weight="700" fill="#8a5914">2a★</text>
+<text x="862" y="775" font-size="22" font-weight="700" fill="#1e293b">05C69</text>
+<text x="968" y="775" font-size="21" font-weight="400" fill="#1e293b">Вершинные подмножества</text>
+<text x="1660" y="775" font-size="21" font-weight="400" fill="#8a5914">2a</text>
+<rect x="845" y="819" width="1015" height="62" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="854" font-size="24" font-weight="700" fill="#1e293b">90B80</text>
+<text x="968" y="854" font-size="23" font-weight="700" fill="#1e293b">Дискретное размещение и назначения</text>
+<rect x="1650" y="829" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="854" font-size="22" font-weight="700" fill="#8a5914">2b★</text>
+<rect x="845" y="897" width="1015" height="94" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="932" font-size="24" font-weight="700" fill="#1e293b">13M05</text>
+<text x="968" y="932" font-size="23" font-weight="700" fill="#1e293b">Структура конечных коммутативных колец</text>
+<rect x="1650" y="907" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="932" font-size="22" font-weight="700" fill="#8a5914">3a★</text>
+<text x="862" y="963" font-size="22" font-weight="700" fill="#1e293b">13M10</text>
+<text x="968" y="963" font-size="21" font-weight="400" fill="#1e293b">Многочлены и конечные коммутативные кольца</text>
+<text x="1660" y="963" font-size="21" font-weight="400" fill="#8a5914">3a</text>
+<rect x="845" y="1007" width="1015" height="62" rx="12" fill="#e8f5ec" stroke="#27834b" stroke-width="2"/>
+<text x="862" y="1042" font-size="24" font-weight="700" fill="#1e293b">12E20</text>
+<text x="968" y="1042" font-size="23" font-weight="700" fill="#1e293b">Конечные поля</text>
+<rect x="1650" y="1017" width="197" height="35" rx="8" fill="#fdf0dc"/>
+<text x="1660" y="1042" font-size="22" font-weight="700" fill="#8a5914">3b★</text>
+</svg>

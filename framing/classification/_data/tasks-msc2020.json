@@ -1,0 +1,393 @@
+{
+  "scheme": "MSC2020",
+  "classification_note": "Авторская тематическая разметка учебных задач; не официальная индексация публикаций.",
+  "sources": {
+    "official": "https://msc2020.org/",
+    "csv": "/Users/g.gasaev/base/math/_msc2020/_src/MSC_2020.csv",
+    "guide": "/Users/g.gasaev/base/math/_msc2020/_src/msc2020-structure.md"
+  },
+  "nodes": [
+    {
+      "code": "05-XX",
+      "parent": "MSC2020",
+      "title_ru": "Комбинаторика",
+      "title_en": "Combinatorics"
+    },
+    {
+      "code": "05C05",
+      "parent": "05Cxx",
+      "title_ru": "Деревья",
+      "title_en": "Trees"
+    },
+    {
+      "code": "05C07",
+      "parent": "05Cxx",
+      "title_ru": "Степени вершин",
+      "title_en": "Vertex degrees"
+    },
+    {
+      "code": "05C10",
+      "parent": "05Cxx",
+      "title_ru": "Планарность и топология графов",
+      "title_en": "Planar graphs; geometric and topological aspects of graph theory"
+    },
+    {
+      "code": "05C12",
+      "parent": "05Cxx",
+      "title_ru": "Расстояния в графах",
+      "title_en": "Distance in graphs"
+    },
+    {
+      "code": "05C21",
+      "parent": "05Cxx",
+      "title_ru": "Потоки в графах",
+      "title_en": "Flows in graphs"
+    },
+    {
+      "code": "05C25",
+      "parent": "05Cxx",
+      "title_ru": "Графы и абстрактная алгебра",
+      "title_en": "Graphs and abstract algebra (groups, rings, fields, etc.)"
+    },
+    {
+      "code": "05C30",
+      "parent": "05Cxx",
+      "title_ru": "Перечисление графов",
+      "title_en": "Enumeration in graph theory"
+    },
+    {
+      "code": "05C38",
+      "parent": "05Cxx",
+      "title_ru": "Пути и циклы",
+      "title_en": "Paths and cycles"
+    },
+    {
+      "code": "05C40",
+      "parent": "05Cxx",
+      "title_ru": "Связность",
+      "title_en": "Connectivity"
+    },
+    {
+      "code": "05C45",
+      "parent": "05Cxx",
+      "title_ru": "Эйлеровы и гамильтоновы графы",
+      "title_en": "Eulerian and Hamiltonian graphs"
+    },
+    {
+      "code": "05C50",
+      "parent": "05Cxx",
+      "title_ru": "Графы и линейная алгебра",
+      "title_en": "Graphs and linear algebra (matrices, eigenvalues, etc.)"
+    },
+    {
+      "code": "05C60",
+      "parent": "05Cxx",
+      "title_ru": "Изоморфизмы и гомоморфизмы графов",
+      "title_en": "Isomorphism problems in graph theory (reconstruction conjecture, etc.) and homomorphisms (subgraph embedding, etc.)"
+    },
+    {
+      "code": "05C69",
+      "parent": "05Cxx",
+      "title_ru": "Вершинные подмножества",
+      "title_en": "Vertex subsets with special properties (dominating sets, independent sets, cliques, etc.)"
+    },
+    {
+      "code": "05C70",
+      "parent": "05Cxx",
+      "title_ru": "Паросочетания и другие подмножества рёбер",
+      "title_en": "Edge subsets with special properties (factorization, matching, partitioning, covering and packing, etc.)"
+    },
+    {
+      "code": "05C85",
+      "parent": "05Cxx",
+      "title_ru": "Алгоритмы на графах",
+      "title_en": "Graph algorithms (graph-theoretic aspects)"
+    },
+    {
+      "code": "05Cxx",
+      "parent": "05-XX",
+      "title_ru": "Теория графов",
+      "title_en": "Graph theory"
+    },
+    {
+      "code": "11-XX",
+      "parent": "MSC2020",
+      "title_ru": "Теория чисел",
+      "title_en": "Number theory"
+    },
+    {
+      "code": "11B37",
+      "parent": "11Bxx",
+      "title_ru": "Рекуррентные последовательности",
+      "title_en": "Recurrences"
+    },
+    {
+      "code": "11Bxx",
+      "parent": "11-XX",
+      "title_ru": "Последовательности и множества",
+      "title_en": "Sequences and sets"
+    },
+    {
+      "code": "11T06",
+      "parent": "11Txx",
+      "title_ru": "Многочлены над конечными полями",
+      "title_en": "Polynomials over finite fields"
+    },
+    {
+      "code": "11Txx",
+      "parent": "11-XX",
+      "title_ru": "Конечные поля и кольца: арифметика",
+      "title_en": "Finite fields and commutative rings (number-theoretic aspects)"
+    },
+    {
+      "code": "12-XX",
+      "parent": "MSC2020",
+      "title_ru": "Теория полей и многочлены",
+      "title_en": "Field theory and polynomials"
+    },
+    {
+      "code": "12E05",
+      "parent": "12Exx",
+      "title_ru": "Многочлены и неприводимость",
+      "title_en": "Polynomials in general fields (irreducibility, etc.)"
+    },
+    {
+      "code": "12E20",
+      "parent": "12Exx",
+      "title_ru": "Конечные поля",
+      "title_en": "Finite fields (field-theoretic aspects)"
+    },
+    {
+      "code": "12Exx",
+      "parent": "12-XX",
+      "title_ru": "Общая теория полей",
+      "title_en": "General field theory"
+    },
+    {
+      "code": "13-XX",
+      "parent": "MSC2020",
+      "title_ru": "Коммутативная алгебра",
+      "title_en": "Commutative algebra"
+    },
+    {
+      "code": "13M05",
+      "parent": "13Mxx",
+      "title_ru": "Структура конечных коммутативных колец",
+      "title_en": "Structure of finite commutative rings"
+    },
+    {
+      "code": "13M10",
+      "parent": "13Mxx",
+      "title_ru": "Многочлены и конечные коммутативные кольца",
+      "title_en": "Polynomials and finite commutative rings"
+    },
+    {
+      "code": "13Mxx",
+      "parent": "13-XX",
+      "title_ru": "Конечные коммутативные кольца",
+      "title_en": "Finite commutative rings"
+    },
+    {
+      "code": "90-XX",
+      "parent": "MSC2020",
+      "title_ru": "Исследование операций",
+      "title_en": "Operations research, mathematical programming"
+    },
+    {
+      "code": "90B80",
+      "parent": "90Bxx",
+      "title_ru": "Дискретное размещение и назначения",
+      "title_en": "Discrete location and assignment"
+    },
+    {
+      "code": "90Bxx",
+      "parent": "90-XX",
+      "title_ru": "Исследование операций и управление",
+      "title_en": "Operations research and management science"
+    },
+    {
+      "code": "90C27",
+      "parent": "90Cxx",
+      "title_ru": "Комбинаторная оптимизация",
+      "title_en": "Combinatorial optimization"
+    },
+    {
+      "code": "90C35",
+      "parent": "90Cxx",
+      "title_ru": "Оптимизация на графах и сетях",
+      "title_en": "Programming involving graphs or networks"
+    },
+    {
+      "code": "90Cxx",
+      "parent": "90-XX",
+      "title_ru": "Математическое программирование",
+      "title_en": "Mathematical programming"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1a",
+      "folder": "1a-graphs",
+      "number": 1,
+      "title": "Неизоморфные графы с заданными степенями",
+      "primary": "05C30",
+      "secondary": [
+        {
+          "code": "05C07",
+          "reason": "Заданная последовательность степеней вершин."
+        },
+        {
+          "code": "05C60",
+          "reason": "Попарная неизоморфность представителей."
+        },
+        {
+          "code": "05C25",
+          "reason": "Группы автоморфизмов и сумма обратных их порядков."
+        }
+      ],
+      "primary_reason": "Перечисление всех графов с заданными степенями и доказательство полноты списка."
+    },
+    {
+      "id": "1b",
+      "folder": "1b-graphs",
+      "number": 2,
+      "title": "Структура графа, пространства потоков и градиентов",
+      "primary": "05C50",
+      "secondary": [
+        {
+          "code": "05C21",
+          "reason": "Потоки и их разложение по базису."
+        },
+        {
+          "code": "05C38",
+          "reason": "Простые циклы, цикломатическое число."
+        },
+        {
+          "code": "05C05",
+          "reason": "Остовное дерево и связанные с ним базисы."
+        },
+        {
+          "code": "05C40",
+          "reason": "Вершинная и рёберная связность, разрезы."
+        },
+        {
+          "code": "05C12",
+          "reason": "Диаметр графа."
+        },
+        {
+          "code": "05C45",
+          "reason": "Эйлеровость и гамильтоновость."
+        },
+        {
+          "code": "05C10",
+          "reason": "Планарность."
+        }
+      ],
+      "primary_reason": "Базисы пространств потоков и градиентов и разложения по ним."
+    },
+    {
+      "id": "1c",
+      "folder": "1c-graphs",
+      "number": 3,
+      "title": "Максимальный поток в сети по личным данным",
+      "primary": "05C21",
+      "secondary": [
+        {
+          "code": "90C35",
+          "reason": "Оптимизация потока в сети и доказательство максимальности."
+        }
+      ],
+      "primary_reason": "Поиск максимального потока."
+    },
+    {
+      "id": "1d",
+      "folder": "1d-graphs",
+      "number": 4,
+      "title": "Увеличение потока алгоритмом Форда-Фалкерсона",
+      "primary": "05C21",
+      "secondary": [
+        {
+          "code": "05C85",
+          "reason": "Алгоритм увеличивающих путей из заданного потока."
+        },
+        {
+          "code": "90C35",
+          "reason": "Максимизация потока и сертификат оптимальности."
+        }
+      ],
+      "primary_reason": "Поиск максимального потока из заданного начального."
+    },
+    {
+      "id": "2a",
+      "folder": "2a-graphs",
+      "number": 5,
+      "title": "Паросочетание, теоремы Холла и Кёнига",
+      "primary": "05C70",
+      "secondary": [
+        {
+          "code": "05C69",
+          "reason": "Минимальное вершинное покрытие."
+        },
+        {
+          "code": "05C85",
+          "reason": "Алгоритм Куна из начального паросочетания."
+        }
+      ],
+      "primary_reason": "Максимальные и совершенные паросочетания."
+    },
+    {
+      "id": "2b",
+      "folder": "2b-oap",
+      "number": 6,
+      "title": "Оптимальное назначение",
+      "primary": "90B80",
+      "secondary": [
+        {
+          "code": "05C70",
+          "reason": "Назначение как совершенное паросочетание во взвешенном двудольном графе."
+        },
+        {
+          "code": "90C27",
+          "reason": "Комбинаторная оптимизация и доказательство оптимальности."
+        }
+      ],
+      "primary_reason": "Задача об оптимальном назначении."
+    },
+    {
+      "id": "3a",
+      "folder": "3a-algebra",
+      "number": 7,
+      "title": "Факторкольца многочленов и порядки обратимых элементов",
+      "primary": "13M05",
+      "secondary": [
+        {
+          "code": "13M10",
+          "reason": "Кольца F_p[t]/(P), разложение по многочленным множителям."
+        },
+        {
+          "code": "12E05",
+          "reason": "Неприводимость многочлена и критерий того, что факторкольцо является полем."
+        }
+      ],
+      "primary_reason": "Структура конечных факторколец, прямые произведения и группа обратимых элементов."
+    },
+    {
+      "id": "3b",
+      "folder": "3b-algebra",
+      "number": 8,
+      "title": "Конечное поле, минимальный многочлен и периодическая рекурсия",
+      "primary": "12E20",
+      "secondary": [
+        {
+          "code": "11T06",
+          "reason": "Минимальный многочлен элемента конечного поля."
+        },
+        {
+          "code": "11B37",
+          "reason": "Построение рекуррентной последовательности заданного периода."
+        }
+      ],
+      "primary_reason": "Построение конечного поля и элемента заданного порядка."
+    }
+  ]
+}
