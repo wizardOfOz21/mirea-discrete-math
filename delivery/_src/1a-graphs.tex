@@ -1,0 +1,459 @@
+% Транскрипция семи рукописных листов: ../1a-graphs-handwritten.pdf, стр. 1–7.
+% Исходные фотографии 184034–184040 объединены в PDF без перекодирования.
+% Уточнено автором: инициалы Г. К.; обозначение набора образующих A(g).
+% Сохранены паспорт (2,2,4), обозначения и рассуждения рукописи.
+% Зачёркнутые фрагменты и служебные стрелки переходов между листами опущены.
+% Сборка из корня репозитория: delivery/_src/render.sh
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\usepackage{amsmath,amssymb,array,booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ДЗ 1a}
+\rhead{Гасаев Г. К. \quad КМБО-13-24}
+\cfoot{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\col}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\tikzset{vertex/.style={circle,draw,minimum size=7mm,inner sep=0pt},
+  every loop/.style={looseness=8,min distance=13mm}}
+
+\begin{document}
+\begin{center}
+  {\Large\bfseries Домашнее задание 1a}\\[3pt]
+  Гасаев Г. К., КМБО-13-24\\
+  16.11.2026
+\end{center}
+
+\section*{Условие}
+Сначала необходимо сформировать последовательность $a_i$, в которой будут
+встречаться только числа $1$, $2$, $3$ и $4$, по следующему правилу.
+Надо взять первые несколько букв своей фамилии, добавив в случае слишком
+короткой фамилии ещё и имя, заменить каждую букву числом, на единицу большим
+остатка от деления на $4$ её номера в алфавите. Нужно выбрать число $k$
+таким образом, чтобы было
+\[
+  \sum_{i=1}^{k}a_i\leq 8,
+  \qquad \text{но}\qquad
+  \sum_{i=1}^{k+1}a_i>8.
+\]
+Если число оказалось меньше $8$, надо увеличить одно из наименьших чисел
+$a_i$ ($1\leq i\leq k$) на $8-\sum_{i=1}^{k}a_i$.
+Если так получилось, что число $k>5$, то надо увеличить наименьшее из чисел
+$a_1,\ldots,a_6$ на $10-\sum_{i=1}^{6}a_i$ и затем положить $k=6$.
+
+После того как число $k$ и последовательность чисел $a_1,\ldots,a_k$
+определены, нарисуйте все попарно неизоморфные графы (в том числе и несвязные)
+с $k$ вершинами, валентности которых равны $a_1,\ldots,a_k$.
+Докажите полноту этого списка, вычислив
+\[
+  \sum_{\Gamma}\frac{1}{|\Aut\Gamma|}
+\]
+(суммирование по всем нарисованным графам $\Gamma$).
+
+\section*{1. Подготовка вектора $a$}
+Фамилия и имя: \textbf{ГАСАЕВГАМИД}.
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+Буква & $N_{\text{алф}}$ & $N_{\text{алф}}\bmod 4$ & $a_i$\\
+\midrule
+Г & 4 & 0 & 1\\ А & 1 & 1 & 2\\ С & 19 & 3 & 4\\
+Е & 6 & 2 & 3\\ В & 3 & 3 & 4\\ М & 14 & 2 & 3\\
+И & 10 & 2 & 3\\ Д & 5 & 1 & 2\\
+\bottomrule
+\end{tabular}
+\qquad
+\begin{tabular}{c}
+Подставляя вместо букв $a_i$, получаем:\\[6pt]
+\begin{tabular}{c|ccccccccccc}
+ & Г & А & С & А & Е & В & Г & А & М & И & Д\\
+\hline
+$a_i$ & 1 & 2 & 4 & 2 & 3 & 4 & 1 & 2 & 3 & 3 & 2
+\end{tabular}
+\end{tabular}
+\end{center}
+Изначально $a=(1,2,4)$, $k=3$, так как
+\[
+  1+2+4=7\leq 8,\qquad 1+2+4+2=9>8.
+\]
+Добавляем $8-\sum_{i=1}^{3}a_i=1$ к наименьшему элементу (первому):
+\[
+  \boxed{a=(2,2,4).}
+\]
+
+\newpage
+\section*{2. Найдём все графы с паспортом $\{2,2,4\}$}
+Здесь фигурные скобки обозначают мультимножество --- множество,
+допускающее повторения.
+
+\subsection*{2.1. Матрица смежности и СЛАУ}
+Для начала рассмотрим графы с порядком вершин согласно порядку валентностей
+$2,2,4$. Порядок на вершинах обозначаем через имена: $a<b<c$.
+
+Построим матрицу смежности (используем нижний угол):
+\[
+\begin{array}{c|ccc}
+ & a & b & c\\\hline
+a & x_1 & & \\
+b & x_2 & x_3 & \\
+c & x_4 & x_5 & x_6
+\end{array}
+\]
+Тогда паспорт (и выбранный порядок) накладывает такие ограничения на матрицу:
+\[
+\begin{cases}
+2x_1+x_2+x_4=2,\\
+x_2+2x_3+x_5=2,\\
+x_4+x_5+2x_6=4.
+\end{cases}
+\]
+На диагонали перед каждым коэффициент $2$: это петли, они считаются дважды
+в валентностях.
+
+В итоге вектор $X=(x_1,x_2,x_3,x_4,x_5,x_6)^{\mathsf T}$ --- матрица
+смежности, свёрнутая в вектор, то есть однозначно описывает какой-то
+конкретный граф (а также естественным образом несёт в себе порядок вершин).
+
+Имеем матрицу:
+\[
+\left(\begin{array}{rrrrrr|r}
+2&1&0&1&0&0&2\\
+0&1&2&0&1&0&2\\
+0&0&0&1&1&2&4
+\end{array}\right).
+\]
+Опустим решение матрицы, способ стандартный для неоднородной СЛАУ:
+\[
+X=\col{x_1\\x_2\\x_3\\x_4\\x_5\\x_6}
+=\col{0\\0\\0\\2\\2\\0}
++\alpha\col{1\\-1\\0\\-1\\1\\0}
++\beta\col{0\\-1\\1\\1\\-1\\0}
++\gamma\col{0\\1\\0\\-1\\-1\\1}.
+\]
+Добавляя к $X$ условия на целочисленность и неотрицательность всех $x_i$
+(это валентности):
+\[
+x_i\geq0\quad\Longleftrightarrow\quad
+\begin{cases}
+\alpha\geq0,\\
+-\alpha-\beta+\gamma\geq0,\\
+\beta\geq0,\\
+2-\alpha+\beta-\gamma\geq0,\\
+2+\alpha-\beta-\gamma\geq0,\\
+\gamma\geq0,\\
+\alpha,\beta,\gamma\in\mathbb Z
+\end{cases}
+\quad\Longleftrightarrow\quad
+\begin{cases}
+\alpha\geq0,\quad\beta\geq0,\\
+\alpha+\beta\leq\gamma,\\
+\gamma\leq2-\alpha+\beta,\\
+\gamma\leq2+\alpha-\beta,\\
+\alpha,\beta,\gamma\in\mathbb Z.
+\end{cases}
+\]
+
+\newpage
+\subsection*{2.2. Перебор решений}
+\[
+\gamma\leq\min(2-\alpha+\beta,2+\alpha-\beta)=2-|\alpha-\beta|.
+\]
+Поэтому система равносильна
+\[
+\begin{cases}
+\alpha\geq0,\quad\beta\geq0,\\
+\alpha+\beta\leq\gamma\leq2-|\alpha-\beta|,\\
+\alpha,\beta,\gamma\in\mathbb Z
+\end{cases}
+\quad\Longleftrightarrow\quad
+\begin{cases}
+\alpha\geq0,\quad\beta\geq0,\\
+\gamma\in[\alpha+\beta,\,2-|\alpha-\beta|],\\
+\alpha+\beta+|\alpha-\beta|\leq2,\\
+\alpha,\beta,\gamma\in\mathbb Z.
+\end{cases}
+\]
+Так как $\alpha+\beta+|\alpha-\beta|=2\max(\alpha,\beta)$, получаем
+\[
+\begin{cases}
+\alpha,\beta\in\{0,1\},\\
+\gamma\in[\alpha+\beta,\,2-|\alpha-\beta|],\\
+\gamma\in\mathbb Z.
+\end{cases}
+\]
+Перебираем все $(\alpha,\beta)$:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$(\alpha,\beta)$ & Ограничение на $\gamma$ & Целые $\gamma$\\
+\midrule
+$(0,0)$ & $[0,2]$ & $0,1,2$\\
+$(0,1)$ & $[1,1]$ & $1$\\
+$(1,0)$ & $[1,1]$ & $1$\\
+$(1,1)$ & $[2,2]$ & $2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Таким образом,
+\[
+(\alpha,\beta,\gamma)\in
+\{(0,0,0),(0,0,1),(0,0,2),(0,1,1),(1,0,1),(1,1,2)\}.
+\]
+Подставляя в $X$, получаем:
+\[
+X\in\left\{
+\col{0\\0\\0\\2\\2\\0},
+\col{0\\1\\0\\1\\1\\1},
+\col{0\\2\\0\\0\\0\\2},
+\col{0\\0\\1\\2\\0\\1},
+\col{1\\0\\0\\0\\2\\1},
+\col{1\\0\\1\\0\\0\\2}
+\right\}.
+\]
+Получили шесть графов, подходящих под паспорт с порядком $(2,2,4)$.
+Но мы не учли порядки $(2,4,2)$ и $(4,2,2)$.
+Они получаются из найденных графов перестановками вершин.
+Все новые векторы будут изоморфны каким-то из найденных, однако и среди
+найденных могут быть изоморфные. То есть система полна, но не минимальна
+(точнее, мы пока не знаем, минимальна ли).
+
+\newpage
+\section*{3. Классы изоморфизма}
+Любые перестановки вершин (их в данном случае $3!=6$, для трёх вершин)
+сохраняют структуру рёбер (и паспорт), то есть ведут к изоморфному графу.
+И каждой из них соответствует перестановка координат $x_i$ матрицы
+(вектора) смежности:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Перестановка вершин & Соответствующая перестановка $x_i$ & Вектор после перестановки\\
+\midrule
+$(ab)$ & $(13)(45)$ & $(x_3,x_2,x_1,x_5,x_4,x_6)$\\
+$(ac)$ & $(16)(25)$ & $(x_6,x_5,x_3,x_4,x_2,x_1)$\\
+$(bc)$ & $(24)(36)$ & $(x_1,x_4,x_6,x_2,x_5,x_3)$\\
+$(abc)$ & $(136)(254)$ & $(x_6,x_4,x_1,x_5,x_2,x_3)$\\
+$(acb)$ & $(163)(245)$ & $(x_3,x_5,x_6,x_2,x_4,x_1)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Теперь по найденным из СЛАУ шести векторам и перестановкам на $x_i$,
+сохраняющим изоморфизм, восстановим все графы паспорта $\{2,2,4\}$
+и их связи друг с другом.
+
+В таблицах первая строка задаёт исходный вектор, остальные --- его образы.
+Например, запись $000220$ означает $(0,0,0,2,2,0)$.
+
+\begin{center}
+\begin{minipage}[t]{.47\textwidth}
+\centering\textbf{Класс 1}\\[5pt]
+\begin{tabular}{cc}
+Перестановки & Вектор\\\hline
+$\mathrm{id},(ab)$ & $000220$\\
+$(bc),(acb)$ & $020020$\\
+$(abc),(ac)$ & $020200$
+\end{tabular}
+
+\medskip
+Представитель: $000220$.
+
+\begin{tikzpicture}
+\node[vertex] (a) at (0,1.5) {$a$};
+\node[vertex] (b) at (2,1.5) {$b$};
+\node[vertex] (c) at (1,0) {$c$};
+\draw (a) to[bend left=18] (c) (a) to[bend right=18] (c);
+\draw (b) to[bend left=18] (c) (b) to[bend right=18] (c);
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{.47\textwidth}
+\centering\textbf{Класс 2}\\[5pt]
+\begin{tabular}{cc}
+Перестановки & Вектор\\\hline
+$\mathrm{id},(ab)$ & $010111$\\
+$(bc),(acb)$ & $011110$\\
+$(abc),(ac)$ & $110110$
+\end{tabular}
+
+\medskip
+Представитель: $010111$.
+
+\begin{tikzpicture}
+\node[vertex] (a) at (0,1.5) {$a$};
+\node[vertex] (b) at (2,1.5) {$b$};
+\node[vertex] (c) at (1,0) {$c$};
+\draw (a)--(b)--(c)--(a) (c) edge[loop below] (c);
+\end{tikzpicture}
+\end{minipage}
+\end{center}
+
+\newpage
+\begin{center}
+\begin{minipage}[t]{.47\textwidth}
+\centering\textbf{Класс 3}\\[5pt]
+\begin{tabular}{cc}
+Перестановки & Вектор\\\hline
+$\mathrm{id},(ab)$ & $020002$\\
+$(bc),(acb)$ & $002200$\\
+$(abc),(ac)$ & $200020$
+\end{tabular}
+
+\medskip
+Представитель: $020002$.
+
+\begin{tikzpicture}
+\node[vertex] (a) at (0,1.8) {$a$};
+\node[vertex] (b) at (2,1.8) {$b$};
+\node[vertex] (c) at (1,0) {$c$};
+\draw (a) to[bend left=18] (b) (a) to[bend right=18] (b);
+\draw (c) edge[loop left] (c) (c) edge[loop right] (c);
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{.47\textwidth}
+\centering\textbf{Класс 4}\\[5pt]
+\begin{tabular}{cc}
+Перестановки & Вектор\\\hline
+$\mathrm{id},(ab)$ & $101002$\\
+$(bc),(acb)$ & $102001$\\
+$(ac),(abc)$ & $201001$
+\end{tabular}
+
+\medskip
+Представитель: $101002$.
+
+\begin{tikzpicture}
+\node[vertex] (a) at (0,1.8) {$a$};
+\node[vertex] (b) at (2,1.8) {$b$};
+\node[vertex] (c) at (1,0) {$c$};
+\draw (a) edge[loop above] (a) (b) edge[loop above] (b);
+\draw (c) edge[loop left] (c) (c) edge[loop right] (c);
+\end{tikzpicture}
+\end{minipage}
+\end{center}
+
+\subsection*{Класс 5}
+\begin{center}
+\begin{minipage}{.46\textwidth}
+\centering
+\begin{tabular}{cc}
+Перестановка & Вектор\\\hline
+$\mathrm{id}$ & $100021$\\
+$(ab)$ & $001201$\\
+$(acb)$ & $021001$\\
+$(ac)$ & $120001$\\
+$(abc)$ & $101200$\\
+$(bc)$ & $101020$
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}{.46\textwidth}
+\centering
+Представитель: $100021$.
+
+\begin{tikzpicture}
+\node[vertex] (a) at (0,1.8) {$a$};
+\node[vertex] (b) at (2,1.8) {$b$};
+\node[vertex] (c) at (1,0) {$c$};
+\draw (a) edge[loop above] (a) (c) edge[loop below] (c);
+\draw (b) to[bend left=18] (c) (b) to[bend right=18] (c);
+\end{tikzpicture}
+\end{minipage}
+\end{center}
+Как видно, в найденных из СЛАУ решениях было два изоморфных графа:
+$100021$ и $001201$ из класса 5.
+
+Таким образом, система представителей каждого класса
+\[
+\Gamma=\left\{
+\col{0\\0\\0\\2\\2\\0},
+\col{0\\1\\0\\1\\1\\1},
+\col{0\\2\\0\\0\\0\\2},
+\col{1\\0\\1\\0\\0\\2},
+\col{1\\0\\0\\0\\2\\1}
+\right\}
+\]
+полна и минимальна.
+
+\newpage
+\section*{4. Проверка полноты через массу системы}
+Теперь проверим это, вычислив массу полной системы по формуле (пункт 4.2)
+\[
+M_{\text{полн}}=\frac{PQ}{(2N)!},\qquad
+N=\frac12\sum_i n_i,\qquad
+P=\frac{(2N)!}{N!\,2^N},
+\]
+\[
+Q=\frac{(2N)!}{(n_1!)^{m_1}m_1!\cdots(n_s!)^{m_s}m_s!}.
+\]
+Здесь $n_1,\ldots,n_s$ --- встречающиеся валентности,
+$m_1,\ldots,m_s$ --- частоты, с которыми они встречаются в векторе паспорта.
+Сравним с массой нашей системы, вычисленной по определению (пункт 4.1):
+\[
+M_{\Gamma}=\sum_{g\in\Gamma}\frac{1}{|\Aut g|}.
+\]
+
+\subsection*{4.1. Автоморфизмы графов из $\Gamma$}
+Обозначения:
+\begin{itemize}
+\item $T$ --- обмен вершин $a,b$, переставляющий рёбра и петли,
+сохраняя их номера;
+\item $P_{uv}$ --- обмен параллельных рёбер между $u$ и $v$;
+\item $P_c$ --- обмен двух петель у $c$;
+\item $F_u$ --- переворот петли у $u$ ($F_{u,1}$, $F_{u,2}$, если две петли).
+\end{itemize}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{clc}
+\toprule
+Граф $g$ & Основание $A(g)$ & Количество автоморфизмов $2^{|A(g)|}=|\Aut g|$\\
+\midrule
+$000220$ & $P_{ac},P_{bc},T$ & $2^3=8$\\
+$010111$ & $F_c,T$ & $2^2=4$\\
+$020002$ & $P_{ab},F_{c,1},F_{c,2},P_c,T$ & $2^5=32$\\
+$101002$ & $F_a,F_b,F_{c,1},F_{c,2},P_c,T$ & $2^6=64$\\
+$100021$ & $P_{bc},F_a,F_c$ & $2^3=8$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Тогда
+\[
+M_{\Gamma}=\sum_{g\in\Gamma}\frac{1}{|\Aut g|}
+=\frac18+\frac14+\frac1{32}+\frac1{64}+\frac18
+=\boxed{\frac{35}{64}}.
+\]
+
+\newpage
+\subsection*{4.2. Масса полной системы по комбинаторной формуле}
+\[
+(n_1,n_2,n_3)=(2,2,4),
+\]
+\[
+N=\frac12\sum_i n_i=\frac{2+2+4}{2}=4,
+\qquad 2N=8.
+\]
+\[
+P=\frac{(2N)!}{N!\,2^N}
+=\frac{8!}{4!\,2^4}=105.
+\]
+\[
+Q=\frac{8!}{(2!)^2\,4!\,2!}=210.
+\]
+\[
+M_{\text{полн}}=\frac{PQ}{(2N)!}
+=\frac{105\cdot210}{8!}
+=\boxed{\frac{35}{64}}.
+\]
+
+\section*{5. Вывод}
+Как видно, $M_{\text{полн}}=M_{\Gamma}$, что ещё раз доказывает,
+что $\Gamma$ --- полная система.
+\end{document}
