@@ -1,0 +1,14 @@
+# Названия
+
+## Название модели
+
+Русский: модель определения.
+English: Definition Model.
+
+## Части представления
+
+- Область знания — knowledge domain.
+- Определение — definition.
+- Параметры экземпляра — instance parameters.
+- Пример — example.
+- Значения параметров — parameter values.
